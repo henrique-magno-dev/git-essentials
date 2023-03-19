@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+html {
+    background: #000010 !important;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.paddingClamp {
+    padding-inline: min(60px, 2.5vw);
+}

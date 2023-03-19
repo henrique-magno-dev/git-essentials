@@ -1,0 +1,64 @@
+
+:root {
+    --tituloCapa: clamp(4.06rem, calc(3.3rem + 3.8vw), 6.25rem);
+    --textoCapa: clamp(1.25rem, calc(1.03rem + 1.09vw), 1.88rem);
+    --textoCapa2: clamp(1.25rem, calc(1.03rem + 1.09vw), 1.6rem);
+}
+
+
+.textoCapa {
+    font-size: var(--textoCapa);
+}
+.textoNomeCapa {
+    font-size: var(--textoCapa2) !important;
+}
+
+.tituloCapa {
+    font-size: var(--tituloCapa) !important;
+    margin-top: '10px';
+}
+
+.shuffleText {
+    animation: shuffleText steps(7) 1s ;
+    animation-iteration-count: 2;
+
+}
+.shuffleText2 {
+    animation: shuffleText2 steps(7) 1s ;
+    animation-iteration-count: 2;
+    
+}
+.shuffleTitle {
+    animation: shuffleTitle steps(7) 1s ;
+    animation-iteration-count: 2;
+
+}
+@keyframes shuffleText2 {
+    0% {
+       transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-224px);
+    }
+
+
+}
+@keyframes shuffleText {
+    0% {
+       transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-280px);
+    }
+
+}
+@keyframes shuffleTitle {
+    0% {
+       transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-784px);
+    }
+
+}
+

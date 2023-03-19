@@ -1,0 +1,26 @@
+{
+  "extends": ["next/core-web-vitals", "airbnb", "airbnb-typescript"],
+  "parserOptions": {
+    "project": "tsconfig.json"
+  },
+  "rules": {
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "jsx-a11y/no-noninteractive-tabindex": "off",
+    "jsx-a11y/tabindex-no-positive": "error",
+    "semi": ["error", "never"],
+    "@typescript-eslint/semi": ["error", "never"],
+    "max-len": "off",
+    "jsx-quotes": ["error", "prefer-single"],
+    "import/no-extraneous-dependencies": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "space-in-parens": ["error", "always"],
+    "object-curly-spacing": ["error", "always"],
+    "template-curly-spacing": ["error", "always"]
+  }
+}
