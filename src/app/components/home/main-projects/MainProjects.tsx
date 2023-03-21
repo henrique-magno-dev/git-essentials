@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Tilt from 'react-parallax-tilt'
 import './MainProjects.css'
@@ -62,7 +62,7 @@ const MainProject = () => {
                         id={`img-main-repo-${ repoIdx }`}
                         src={repoBackgroundImageUrl( dataMainRepos, repoIdx )}
                         alt='Project Background'
-                        className='absolute top-0 flex items-center justify-center ease-in-out'
+                        className='absolute text-gray-600 top-0 flex items-center justify-center ease-in-out'
                       />
                     </Link>
                   </div>

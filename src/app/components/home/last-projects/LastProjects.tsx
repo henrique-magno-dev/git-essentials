@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Tilt from 'react-parallax-tilt'
 import './LastProjects.css'
@@ -23,7 +23,7 @@ const MainProjects = () => {
 
   const description = ( repoIdx: any ) => {
     const repoDesc = dataLastRepos[repoIdx].description.slice( 0, dataLastRepos[repoIdx].description.indexOf( 'http' ) )
-    if ( windowWidth >= 1285 ) { return repoDesc.slice( 0, 80 ) }
+    if ( windowWidth >= 1285 ) { return repoDesc.slice( 0, 130 ) }
     if ( windowWidth >= 1024 ) { return repoDesc.slice( 0, 70 ) }
     return ''
   }
@@ -66,29 +66,35 @@ const MainProjects = () => {
                             id={`img-last-repo-${ repoIdx }`}
                             src={repoBackgroundImageUrl( dataLastRepos, repoIdx )}
                             alt='Project Background'
-                            className='absolute top-0 flex items-center justify-center ease-in-out'
+                            className='absolute text-gray-600 top-0 flex items-center justify-center ease-in-out'
                           />
                         </Link>
                       </div>
                     </div>
                     <div className='sm:mt-3 sm:h-auto lg:w-1/2 lg:pl-2 '>
                       <div className=' lg:h-4/5'>
-                        <div className='md:mt-1 lg:h-2/5 '>
-                          <div
-                            tabIndex={0}
-                            className=' collapse rounded-3xl border-2  border-green-600 bg-[#040C15] text-white md:collapse-arrow lg:collapse-arrow  sm:text-center '
-                          >
-                            <div className='text-medium text-white-400 collapse-title font-thin sm:px-0'>Recursos</div>
-                            <div className='collapse-content'>
-                              {dataLastRepos[repoIdx].topics.map( ( topic: Array<string> ) => (
-                                <div key={`badge-lastP-${ topic }`} className='badge ml-1 border-gray-800 bg-gray-600 text-white'>
-                                  #{topic}
+                        {
+                          windowWidth >= 600
+                            ? (
+                              <div className='md:mt-1 lg:h-2/5 '>
+                                <div
+                                  tabIndex={0}
+                                  className=' collapse rounded-3xl border-2  border-green-600 bg-[#040C15] text-white md:collapse-arrow lg:collapse-arrow  sm:text-center '
+                                >
+                                  <div className='text-medium text-white-400 collapse-title font-thin sm:px-0'>Recursos</div>
+                                  <div className='collapse-content'>
+                                    {dataLastRepos[repoIdx].topics.map( ( topic: Array<string> ) => (
+                                      <div key={`badge-lastP-${ topic }`} className='badge ml-1 border-gray-800 bg-gray-600 text-white'>
+                                        #{topic}
+                                      </div>
+                                    ) )}
+                                  </div>
                                 </div>
-                              ) )}
-                            </div>
-                          </div>
-                        </div>
-                        <div className=' lg:h-2/5'>{description( repoIdx )}</div>
+                              </div>
+                            )
+                            : ''
+                        }
+                        <div className=' lg:h-2/5 font-thin text-xs mt-2'>{description( repoIdx )}</div>
                         <div className='flex sm:mt-5  md:mt-5  md:h-1/5 lg:h-auto'>
                           <Link
                             href={`${ dataLastRepos[repoIdx].html_url }`}

@@ -1,5 +1,3 @@
-import React from 'react'
-
 import './HomeTitle.css'
 import { Anek_Telugu } from '@next/font/google'
 
@@ -125,7 +123,7 @@ const HomeTitle = () => (
       <div className='-mb-9 flex flex-col'>
         <div className='relative flex h-10 flex-col overflow-y-hidden'>
           <span className='textoCapa shuffleText h-full font-extralight'>
-            <span className='text-green-500'>Olá,</span>
+            <span className='text-green-500'>Olá, </span>
             bem-vindo ao meu web
           </span>
           <ScrambleTextLine1 />

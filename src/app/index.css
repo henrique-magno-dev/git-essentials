@@ -1,3 +1,17 @@
+.slideLeftRight {
+    animation-name: slideLeftRight;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.slideRightLeft {
+    animation-name: slideRightLeft;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
 @keyframes slideLeftRight {
     0% {
         opacity: 0;

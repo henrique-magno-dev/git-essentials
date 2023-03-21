@@ -1,6 +1,5 @@
 /* eslint-disable react/function-component-definition */
 import './globals.css'
-import React from 'react'
 
 export const metadata = {
   title: 'Create Next App',

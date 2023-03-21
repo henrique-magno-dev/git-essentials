@@ -1,24 +1,20 @@
 'use client'
 
-import React from 'react'
+import './index.css'
 import { useInView } from 'react-intersection-observer'
 import Tilt from 'react-parallax-tilt'
 import { useWindowSize } from 'react-use'
-import LastProjects from './components/last-projects/LastProjects'
-import MainProjects from './components/main-projects/MainProjects'
-import HomeTitle from './components/home-components/home-title/HomeTitle'
-import HomeVideo from './components/home-components/home-video/HomeVideo'
+import LastProjects from './components/home/last-projects/LastProjects'
+import MainProjects from './components/home/main-projects/MainProjects'
+import HomeTitle from './components/home/home-title/HomeTitle'
+import HomeVideo from './components/home/home-video/HomeVideo'
 import Footer from './components/footer/Footer'
-// import HomeBG from '../components/HomeComps/home-background/HomeBG'
+// import HomeBG from './components/home-/home-background/HomeBG'
 
 // ! TESTANDO BETTER COMMENTS - não use
 // * TESTANDO BETTER COMMENTS - importante
 // ? TESTANDO BETTER COMMENTS? - questão
 // TODO: Testando better comments - to do
-
-const teste = 'teste'
-// * Super console log, CTRL + ALT + L
-console.log( '🚀 ~ file: page.tsx:24 ~ teste:', teste )
 
 const HomePage = () => {
   const { ref: refTitle } = useInView()
@@ -27,9 +23,9 @@ const HomePage = () => {
   return (
     <>
       <div
-        className='paddingClamp sm:flex sm:flex-col-reverse md:flex md:flex-col-reverse md:pt-32 lg:grid lg:grid-cols-2  lg:pt-0  '
+        className='paddingClamp sm:flex sm:flex-col-reverse md:flex md:flex-col-reverse md:pt-32 lg:grid lg:grid-cols-2 lg:pt-0  '
         style={{
-          marginTop: windowWidth <= 768 ? '100px' : '0',
+          marginTop: windowWidth <= 768 ? '100px' : '',
           height: windowWidth <= 1024 ? '' : '95svh',
         }}
       >
