@@ -22,6 +22,7 @@
     "space-in-parens": ["error", "always"],
     "object-curly-spacing": ["error", "always"],
     "template-curly-spacing": ["error", "always"],
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "linebreak-style" : "off"
   }
 }
